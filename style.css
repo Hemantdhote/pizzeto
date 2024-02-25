@@ -2,14 +2,11 @@
 @font-face {
     font-family: duck;
     src: url("Druk.ttf");
-    
 }
 @font-face {
     font-family: new;
     src: url("NeueMontreal-Regular.ttf");
 }
-
-
 *{
     margin: 0;
     padding: 0;
@@ -35,6 +32,7 @@ html,body{
     height: 20vw;
     width: 20vw;
     margin-top: 10vw;
+    overflow: hidden;
 }
 .page1 .imagecontainer img{
     height: 100%;
@@ -49,6 +47,7 @@ html,body{
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    transition: all ease 0.5s;
 }
 .page1 .three button{
     font-size: 1.6vw;
@@ -58,7 +57,10 @@ html,body{
     padding: 0.5vw 1vw;
     border-radius: 2vw;
     border: 2px solid #2356c7;
-
+}
+.three button:hover{
+    background-color:#184dc4 ;
+    color: #fff;
 }
 .page1 .three h3{
     font-size: 1.2vw;
@@ -69,6 +71,7 @@ html,body{
     color:#2356c7;
 }
 .page2{
+    position: relative;
     width: 100%;
     background-color: #f2f1e4;
 }
@@ -96,6 +99,7 @@ html,body{
     margin-top: 3vw;
 }
 .box1{
+    position: relative;
     height: 100%;
     width: calc(100% / 3);
     border-radius: 2vw;
@@ -103,19 +107,64 @@ html,body{
     overflow: hidden;
     transition: all ease 0.5s;
 }
+.box1 .mouse{
+    position: absolute;
+    height: 3vw;
+    width: 6vw;
+    background-color:#fff;
+    border-radius:4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: new;
+    font-size: 1.6vw;
+    color: #184dc4;
+    scale: 0;
+}
 .box2{
+    position: relative;
     height: 100%;
     width: calc(100% / 3);
     border-radius: 2vw;
     margin-top: 2vw;
     overflow: hidden;
-}.box3{
+}
+.box2 .mouse{
+    position: absolute;
+    height: 3vw;
+    width: 6vw;
+    background-color:#fff;
+    border-radius:4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: new;
+    font-size: 1.6vw;
+    color: #184dc4;
+    scale: 0;
+}
+.box3{
+    position: relative;
     height: 100%;
     width: calc(100% / 3);
     border-radius: 2vw;
     margin-top: 9vw;
     overflow: hidden;
     transition: all ease 0.5s;
+}
+.box3 .mouse{
+    position: absolute;
+    height: 3vw;
+    width: 6vw;
+    background-color:#fff;
+    border-radius:4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: new;
+    font-size: 1.6vw;
+    color: #184dc4;
+    scale: 1;
 }
 .boxes img{
     height: 100%;
@@ -133,7 +182,6 @@ html,body{
     width: 100%;
     background-color: #f2f1e4;
 }
-
 .page3 .line{
     height: 0.08vw;
     width: 93vw;
@@ -156,11 +204,30 @@ html,body{
     background-color: #2356c7;
     margin-top: 5vw;
 }
-
 .page4{
     height: 156vh;
     width: 100%;
     background-color: #f2f1e4;
+    position: relative;
+}
+.page4mouse{
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    position: absolute;
+    background-color: #fff;
+    scale: 0;
+    font-family: new;
+    font-size: 1.4vw;
+   height: 3vw;
+   width: 10vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5vw 0vw;
+   border-radius: 2vw;
+   color: #2356c7;
+    border: 1px solid #2356c7;
 }
 .page4 .count{
     display: flex;
@@ -207,12 +274,10 @@ html,body{
     100%{
         transform: translateX(calc(-100% - 2vw));
     }
-    
 }
 .videoholder{
     z-index: 9999;
 }
-
 .videoholder video{
     position: absolute;
     height: 65vw;
@@ -231,6 +296,26 @@ html,body{
     height: 160vh;
     width: 100%;
     background-color: #f2f1e4;
+    position: relative;
+}
+.page5mouse{
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    position: absolute;
+    background-color: #fff;
+    scale: 0;
+    font-family: new;
+    font-size: 1.4vw;
+   height: 3vw;
+   width: 15vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5vw 0vw;
+   border-radius: 2vw;
+   color: #2356c7;
+    border: 1px solid #2356c7;
 }
 .page5 .count{
     display: flex;
@@ -277,12 +362,10 @@ html,body{
     100%{
         transform: translateX(calc(-100% - 2vw));
     }
-    
 }
 .videoholder{
     z-index: 9999;
 }
-
 .videoholder video{
     position: absolute;
     height: 65vw;
@@ -297,11 +380,30 @@ html,body{
     background-color: #2356c7;
     margin-top: 56vw;
 }
-
 .page6{
     height: 100%;
     width: 100%;
     background-color:#f2f1e4;
+    position: relative;
+}
+.page6mouse{
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    position: absolute;
+    background-color: #fff;
+    scale: 0;
+    font-family: new;
+    font-size: 1.4vw;
+   height: 3vw;
+   width: 15vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5vw 0vw;
+   border-radius: 2vw;
+   color: #2356c7;
+    border: 1px solid #2356c7;
 }
 .page6 .count{
     display: flex;
@@ -348,12 +450,10 @@ html,body{
     100%{
         transform: translateX(calc(-100% - 2vw));
     }
-    
 }
 .videoholder{
     z-index: 9999;
 }
-
 .videoholder video{
     position: absolute;
     height: 65vw;
@@ -368,10 +468,29 @@ html,body{
     background-color: #2356c7;
     margin-top: 54vw;
 }
-
 .page7{
     width: 100%;
     background-color:#f2f1e4;
+    position: relative;
+}
+.page7mouse{
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    position: absolute;
+    background-color: #fff;
+    scale: 0;
+    font-family: new;
+    font-size: 1.4vw;
+   height: 3vw;
+   width: 11vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1.5vw 0vw;
+   border-radius: 2vw;
+   color: #2356c7;
+    border: 1px solid #2356c7;
 }
 .page7 .count{
     display: flex;
@@ -417,13 +536,11 @@ html,body{
     }
     100%{
         transform: translateX(calc(-100% - 2vw));
-    }
-    
+    }   
 }
 .videoholder{
     z-index: 9999;
 }
-
 .videoholder video{
     position: absolute;
     height: 65vw;
@@ -480,11 +597,76 @@ html,body{
     background-color: #2356c7;
     margin-top: 4vw;
 }
-
-
-
-
-
+.about1{
+    height: 3vw;
+    overflow: hidden;
+}
+.about1 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}
+.about2{
+    height: 3vw;
+    overflow: hidden;
+}
+.about2 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}.about3{
+    height: 3vw;
+    overflow: hidden;
+}
+.about3 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}
+.about4{
+    height: 3vw;
+    overflow: hidden;
+}
+.about4 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}
+.about5{
+    height: 3vw;
+    overflow: hidden;
+}
+.about5 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}.about6{
+    height: 3vw;
+    overflow: hidden;
+}
+.about6 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}
+.about7{
+    height: 3vw;
+    overflow: hidden;
+}
+.about7 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}
+.about8{
+    height: 9vw;
+    overflow: hidden;
+}
+.about8 h2{
+    font-family: new;
+    color: #184dc4;
+    font-size: 2.5vw;
+}
 
 
 
